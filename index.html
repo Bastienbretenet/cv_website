@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bastien Bretenet — Dev Full Stack & IA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:    '#f5e6c8',
+            'cream-dark': '#e8d0a0',
+            brown:    '#2a1f14',
+            bordeaux: '#8b2020',
+            vert:     '#1a4a2a',
+            bleu:     '#000080',
+            sepia:    '#6b4423',
+          },
+          fontFamily: {
+            serif:  ['"Times New Roman"', 'Times', 'Georgia', 'serif'],
+            mono:   ['"Courier New"', 'Courier', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen">
+
+  <!-- ============================================================
+       MARQUEE TOP BAR
+  ============================================================ -->
+  <div class="marquee-bar">
+    <div class="marquee-scroll">
+      <span class="marquee-inner">
+        ★ BIENVENUE SUR LE SITE DE Bastien Bretenet ★ DEV FULL STACK SENIOR ★ EN ROUTE VERS L'IA ★ BORDEAUX &amp; REMOTE ★ DISPONIBLE EN FREELANCE ★ FORMATION ALYRA 2026 ★ SYMFONY · REACT · DOCKER · PYTHON · LLM ★ CLIQUEZ SUR "CONTACT" POUR ME PARLER ★
+      </span>
+    </div>
+    <div class="marquee-actions">
+      <button id="share-btn" onclick="shareCV()">📤</button>
+      <button id="print-btn" onclick="window.print()">🖨️</button>
+      <span id="share-feedback">✓</span>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 py-4">
+
+    <nav class="retro-nav" aria-label="Navigation principale">
+      <span class="font-mono text-xs text-sepia mr-2 select-none">[ Menu ]</span>
+      <a href="#hero">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#stack">Stack</a>
+      <a href="#apprentissage">IA / Alyra</a>
+      <a href="#methode">Méthode</a>
+      <a href="#pourqui">Pour qui</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- ============================================================
+         SECTION 1 — HERO
+    ============================================================ -->
+    <section id="hero" class="mb-6" aria-label="Présentation principale">
+      <div class="win95-deep">
+        <div class="titlebar">
+          <div class="flex items-center gap-1 min-w-0">
+            <span class="titlebar-icon">🖥️</span>
+            <span class="truncate">Bastien Bretenet — portfolio.exe — Dev Full Stack &amp; IA</span>
+          </div>
+          <div class="titlebar-btns">
+            <div class="win-btn">_</div>
+            <div class="win-btn">□</div>
+            <div class="win-btn font-bold">✕</div>
+          </div>
+        </div>
+        <div class="win-body" style="padding: 0;">
+          <div class="hero-layout flex items-stretch flex-wrap">
+
+            <!-- Photo -->
+            <div class="flex-shrink-0" style="padding: 24px 16px 24px 20px; display:flex; align-items:center;">
+              <div style="
+                transform: rotate(-3deg);
+                box-shadow: 4px 4px 0 #8a7560, 8px 8px 0 rgba(0,0,0,0.25), 0 16px 32px rgba(0,0,0,0.3);
+                background: white;
+                padding: 8px 8px 32px 8px;
+                display: inline-block;
+              ">
+                <img
+                  src="./cv-photo.png"
+                  alt="Photo de Bastien Bretenet"
+                  style="width:190px; height:250px; object-fit:cover; display:block; filter: sepia(15%) contrast(1.05);"
+                  onerror="this.outerHTML='<div style=\'width:190px;height:250px;background:var(--cream-dark);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:var(--sepia-light);text-align:center;padding:10px;\'>photo pro</div>'"
+                >
+                <div style="text-align:center; font-family:\'Share Tech Mono\',monospace; font-size:10px; color:#8a7560; margin-top:6px;">Bastien Bretenet · 2026</div>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 min-w-0" style="padding: 14px 16px;">
+              <div class="hero-name">Bastien Bretenet</div>
+              <div class="hero-role">Développeur Full Stack Senior &amp; (bientôt) IA</div>
+
+              <div class="mt-4 mb-4 text-base leading-relaxed">
+                <p class="mb-3">
+                  <em class="text-sepia">Développeur full stack senior, en route vers l'IA.</em>
+                </p>
+                <p class="mb-3">
+                  Depuis bientôt 10 ans, je code. J'ai commencé par des sites PHP en agence — pas de framework, pas de git, pas de CI/CD. Puis la curiosité a pris le dessus : Symfony, Docker, les APIs, les tests. Chaque nouvelle techno apprise par envie, pas par obligation. 
+                  Aujourd'hui, j'ai travaillé en agence, en freelance, pour des startups, des SaaS B2B et des grands groupes. En 2026, je franchis une nouvelle étape : l'intelligence artificielle, avec une formation Développeur IA chez Alyra.
+                </p>
+                <p class="mb-3">
+                  Pourquoi&nbsp;? Parce que l'IA est en train de redéfinir les règles — pas dans 5 ans, maintenant. Les entreprises qui ne s'en emparent pas vont se faire dépasser par celles qui l'ont intégré au cœur de leur produit. Mon pari&nbsp;: maîtriser ce virage pour accompagner les boîtes qui veulent rester dans la course, pas juste suivre la tendance.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-2 items-center">
+                <span class="badge-location">📍 Bordeaux &amp; Remote France</span>
+                <span class="badge-dispo">✓ Disponible en freelance</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
+
+    <!-- ============================================================
+         SECTION 2 — À PROPOS
+    ============================================================ -->
+    <section id="apropos" class="mb-6" aria-label="À propos">
+      <div class="win95-deep">
+        <div class="titlebar">
+          <div class="flex items-center gap-1">
+            <span class="titlebar-icon">📄</span>
+            <span>le_pont_entre_deux_mondes.txt — Bloc-notes</span>
+          </div>
+          <div class="titlebar-btns">
+            <div class="win-btn">_</div>
+            <div class="win-btn">□</div>
+            <div class="win-btn">✕</div>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="retro-h2">Le pont entre deux mondes</h2>
+          <div class="win-inset mb-4 text-sm leading-relaxed">
+            <p class="mb-3">8+ ans de web, PHP, Symfony, d'API, de Docker et de CI/CD. </p>
+            <p>Le marché bascule&nbsp;: les boîtes cherchent des profils capables de <strong>mettre une IA en prod dans une vraie app</strong>. C'est exactement le profil que je construis — avec la formation Développeur IA d'Alyra comme nouvelle couche par-dessus mon socle technique.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
+
+    <!-- ============================================================
+         SECTION 3 — STACK
+    ============================================================ -->
+    <section id="stack" class="mb-6" aria-label="Stack technique">
+      <h2 class="retro-h2 px-1">Stack actuelle — ce que je maîtrise</h2>
+      <div class="stack-grid">
+
+        <div class="win95">
+          <div class="titlebar" style="background: linear-gradient(to right, #1a4a2a, #2a6a3a);">
+            <div class="flex items-center gap-1">
+              <span class="titlebar-icon">⚙️</span>
+              <span>Backend.exe</span>
+            </div>
+            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
+          </div>
+          <div class="win-body">
+            <ul class="stack-list">
+              <li>PHP · Symfony</li>
+              <li>API Platform</li>
+              <li>Doctrine ORM</li>
+              <li>Symfony Messenger</li>
+              <li>PHPUnit</li>
+              <li>MySQL · PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="win95">
+          <div class="titlebar" style="background: linear-gradient(to right, #6b2020, #9b3030);">
+            <div class="flex items-center gap-1">
+              <span class="titlebar-icon">🖥️</span>
+              <span>Frontend.exe</span>
+            </div>
+            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
+          </div>
+          <div class="win-body">
+            <ul class="stack-list">
+              <li>JavaScript · TypeScript</li>
+              <li>React · Vue.js</li>
+              <li>Next.js · Nuxt</li>
+              <li>Stimulus · Turbo</li>
+              <li>Tailwind · Bootstrap</li>
+              <li>HTML · CSS</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="win95">
+          <div class="titlebar" style="background: linear-gradient(to right, #3a2060, #5a3080);">
+            <div class="flex items-center gap-1">
+              <span class="titlebar-icon">🐳</span>
+              <span>Infra & Outils.exe</span>
+            </div>
+            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
+          </div>
+          <div class="win-body">
+            <ul class="stack-list">
+              <li>Docker · Linux</li>
+              <li>GitHub Actions</li>
+              <li>GitLab CI</li>
+              <li>Git (avancé)</li>
+              <li>Coolify · VPS</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
+
+    <!-- ============================================================
+         SECTION 4 — APPRENTISSAGE
+    ============================================================ -->
+    <section id="apprentissage" class="mb-6" aria-label="Formation IA Alyra">
+      <div class="win95-deep">
+        <div class="titlebar">
+          <div class="flex items-center gap-1">
+            <span class="titlebar-icon">📚</span>
+            <span>Formation Alyra 2026 — CHARGEMENT EN COURS...</span>
+          </div>
+          <div class="titlebar-btns">
+            <div class="win-btn">_</div>
+            <div class="win-btn">□</div>
+            <div class="win-btn">✕</div>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="retro-h2">En apprentissage — Formation Alyra 2026</h2>
+          <p class="text-sm italic text-sepia mb-4">
+            Formation Développeur IA en cours. Voici ce que j'apprends, honnêtement.
+          </p>
+
+          <!-- 3 groupes compacts en ligne -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs font-mono">
+
+            <div class="win-inset">
+              <div class="font-bold mb-2" style="color: var(--vert);">🐍 Data & Python</div>
+              <div class="space-y-1" style="color: var(--sepia);">
+                <div>Python · SQL · Pandas</div>
+                <div>Matplotlib · Seaborn · EDA</div>
+              </div>
+            </div>
+
+            <div class="win-inset">
+              <div class="font-bold mb-2" style="color: var(--bleu);">🤖 ML & Deep Learning</div>
+              <div class="space-y-1" style="color: var(--sepia);">
+                <div>Scikit-learn · Keras · TensorFlow</div>
+                <div>ANN · CNN · RNN · Fine-tuning</div>
+              </div>
+            </div>
+
+            <div class="win-inset">
+              <div class="font-bold mb-2" style="color: var(--bordeaux);">🚀 Déploiement & MLOps</div>
+              <div class="space-y-1" style="color: var(--sepia);">
+                <div>FastAPI · Streamlit</div>
+                <div>MLOps · Cloud IA · Prod</div>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="mt-4 text-xs italic" style="color: var(--sepia-light);">
+            Programme Alyra — certifiant, 100% en ligne, intervenants terrain. Début 2026.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
+
+    <!-- ============================================================
+         SECTION 6 — MÉTHODE
+    ============================================================ -->
+    <section id="methode" class="mb-6" aria-label="Méthode de travail">
+      <h2 class="retro-h2 px-1">Comment je bosse</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+
+        <div class="win95">
+          <div class="titlebar">
+            <span>🚀 Principe n°1</span>
+            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
+          </div>
+          <div class="win-body">
+            <div class="methode-num">1.</div>
+            <div class="font-bold mb-2 text-sm">Je livre.</div>
+            <p class="text-sm leading-relaxed" style="color: var(--sepia);">Pas de prototype qui dort dans une branche. Code en prod, déployé, monitoré. Le reste, c'est du PowerPoint.</p>
+          </div>
+        </div>
+
+        <div class="win95">
+          <div class="titlebar">
+            <span>🤖 Principe n°2</span>
+            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
+          </div>
+          <div class="win-body">
+            <div class="methode-num">2.</div>
+            <div class="font-bold mb-2 text-sm">L'IA comme copilote.</div>
+            <p class="text-sm leading-relaxed" style="color: var(--sepia);">Je m'appuie sur les LLMs pour aller vite sans perdre en qualité. C'est exactement ce que les boîtes attendent en 2026.</p>
+          </div>
+        </div>
+
+        <div class="win95">
+          <div class="titlebar">
+            <span>💬 Principe n°3</span>
+            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
+          </div>
+          <div class="win-body">
+            <div class="methode-num">3.</div>
+            <div class="font-bold mb-2 text-sm">Je parle business.</div>
+            <p class="text-sm leading-relaxed" style="color: var(--sepia);">Vous me dites votre problème, je vous propose la solution la plus simple qui marche. Pas la stack la plus hype.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
+
+    <!-- ============================================================
+         SECTION 7 — POUR QUI
+    ============================================================ -->
+    <section id="pourqui" class="mb-6" aria-label="Pour qui je travaille">
+      <div class="win95-deep">
+        <div class="titlebar">
+          <div class="flex items-center gap-1">
+            <span class="titlebar-icon">🎯</span>
+            <span>Startup ou SaaS B2B ? — services.txt</span>
+          </div>
+          <div class="titlebar-btns">
+            <div class="win-btn">_</div>
+            <div class="win-btn">□</div>
+            <div class="win-btn">✕</div>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="retro-h2">Vous êtes une entreprise ? Vous ne voulez pas louper la vague ?</h2>
+          <p class="mb-4 text-sm">On va s'entendre. Voici ce sur quoi je peux vous accompagner&nbsp;:</p>
+          <ul class="services-list text-sm">
+            <li><span><strong>Développement de votre produit</strong> — Backend & Frontend</span></li>
+            <li><span><strong>Intégration d'IA dans votre app</strong> — LLM, RAG, agents <em class="text-xs">(Bientôt)</em></span></li>
+            <li><span><strong>Audit &amp; refonte</strong> d'applications existantes</span></li>
+            <li><span><strong>Mise en place CI/CD, Docker, infrastructure</strong></span></li>
+            <li><span><strong>Conseils techniques</strong></span></li>
+          </ul>
+          <p class="mt-4 text-sm italic pt-3 border-t" style="border-color: var(--rule); color: var(--sepia);">
+            Disponible 100% remote, ou sur Bordeaux et alentours pour les rencontres en présentiel.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
+
+    <!-- ============================================================
+         SECTION 8 — CONTACT
+    ============================================================ -->
+    <section id="contact" class="mb-6" aria-label="Contact">
+      <div class="win95-deep">
+        <div class="titlebar">
+          <div class="flex items-center gap-1">
+            <span class="titlebar-icon">📧</span>
+            <span>contact.bat — Invite de commandes</span>
+          </div>
+          <div class="titlebar-btns">
+            <div class="win-btn">_</div>
+            <div class="win-btn">□</div>
+            <div class="win-btn">✕</div>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="retro-h2">On en parle&nbsp;?</h2>
+          <p class="text-sm mb-4">Le plus simple, c'est par email. Je réponds vite (sauf le week-end, je code des side projects).</p>
+
+          <div class="terminal" role="complementary" aria-label="Coordonnées de contact">
+            <div class="terminal-line"><span class="terminal-prompt">C:\&gt; </span>whoami</div>
+            <div class="terminal-line">Bastien Bretenet — Dev Full Stack &amp; IA</div>
+            <div class="terminal-line">&nbsp;</div>
+            <div class="terminal-line"><span class="terminal-prompt">C:\&gt; </span>cat contact.cfg</div>
+            <div class="terminal-line">Email    : <a href="mailto:bastienbretenet@gmail.com">bastienbretenet@gmail.com</a></div>
+            <div class="terminal-line">LinkedIn : <a href="https://www.linkedin.com/in/bastien-bretenet-013871110/" target="_blank" rel="noopener noreferrer">Mon Linkedin</a></div>
+            <div class="terminal-line">&nbsp;</div>
+            <div class="terminal-line"><span class="terminal-prompt">C:\&gt; </span><span class="cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="retro-footer" aria-label="Pied de page">
+
+      <div class="under-construction">🚧 FORMATION IA EN COURS 🚧</div>
+
+      <div class="footer-badges">
+        <span class="footer-badge">[ No cookies · No tracking ]</span>
+      </div>
+
+      <div class="mt-3 text-xs">
+        <span>Last updated : <time datetime="2026-05-16">2026-05-16</time></span>
+        &nbsp;|&nbsp;
+        <span id="retro-clock" aria-live="off">--:--:--</span>
+        &nbsp;|&nbsp;
+        <span>© 2026 — Bastien Bretenet</span>
+      </div>
+
+    </footer>
+
+  </div><!-- /max-w-4xl -->
+
+  <script src="script.js"></script>
+</body>
+</html>
