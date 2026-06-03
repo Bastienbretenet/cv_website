@@ -78,7 +78,7 @@
         <div class="win-body" style="padding: 0;">
           <div class="hero-layout flex items-stretch flex-wrap">
 
-            <!-- Photo -->
+            <!-- Photo avant/après -->
             <div class="flex-shrink-0" style="padding: 24px 16px 24px 20px; display:flex; align-items:center;">
               <div style="
                 transform: rotate(-3deg);
@@ -87,12 +87,21 @@
                 padding: 8px 8px 32px 8px;
                 display: inline-block;
               ">
-                <img
-                  src="./cv-photo.png"
-                  alt="Photo de Bastien Bretenet"
-                  style="width:190px; height:250px; object-fit:cover; display:block; filter: sepia(15%) contrast(1.05);"
-                  onerror="this.outerHTML='<div style=\'width:190px;height:250px;background:var(--cream-dark);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:var(--sepia-light);text-align:center;padding:10px;\'>photo pro</div>'"
-                >
+                <div class="ba-slider" id="ba-slider">
+                  <!-- AFTER (défaut, dessous) -->
+                  <img class="ba-img" src="./photo-1.png" alt="Photo de Bastien Bretenet (après)" draggable="false">
+                  <!-- BEFORE (révélé par slide, dessus, clippé) -->
+                  <div class="ba-before" id="ba-before">
+                    <img class="ba-img" src="./photo-2.jpg" alt="Photo de Bastien Bretenet (avant)" draggable="false">
+                  </div>
+                  <!-- Poignée -->
+                  <div class="ba-handle" id="ba-handle">
+                    <div class="ba-handle-line"></div>
+                    <div class="ba-handle-grip">◄ ►</div>
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="ba-range" id="ba-range"
+                    aria-label="Curseur avant / après photo">
+                </div>
                 <div style="text-align:center; font-family:\'Share Tech Mono\',monospace; font-size:10px; color:#8a7560; margin-top:6px;">Bastien Bretenet · 2026</div>
               </div>
             </div>

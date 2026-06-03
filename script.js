@@ -17,6 +17,18 @@ function shareCV() {
   }
 }
 
+// Before/After photo slider
+(function () {
+  const slider = document.getElementById('ba-slider');
+  const range = document.getElementById('ba-range');
+  if (!slider || !range) return;
+  function apply() {
+    slider.style.setProperty('--pos', range.value + '%');
+  }
+  range.addEventListener('input', apply);
+  apply();
+})();
+
 // Visitor counter — static, 90s style
 (function () {
   const el = document.getElementById('visitor-count');
