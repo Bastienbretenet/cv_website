@@ -1,442 +1,486 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bastien Bretenet — Dev Full Stack & IA</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cream:    '#f5e6c8',
-            'cream-dark': '#e8d0a0',
-            brown:    '#2a1f14',
-            bordeaux: '#8b2020',
-            vert:     '#1a4a2a',
-            bleu:     '#000080',
-            sepia:    '#6b4423',
-          },
-          fontFamily: {
-            serif:  ['"Times New Roman"', 'Times', 'Georgia', 'serif'],
-            mono:   ['"Courier New"', 'Courier', 'monospace'],
-          },
-        }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="min-h-screen">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bastien Bretenet — Développeur, spécialisation Intelligence Artificielle</title>
+<meta name="description" content="Bastien Bretenet, développeur spécialisé en Intelligence Artificielle (Deep Learning, NLP, Vision) et fort d'une dizaine d'années en développement full-stack (Symfony, React). Basé à Bordeaux.">
+<meta property="og:title" content="Bastien Bretenet — Développeur IA & Full-Stack">
+<meta property="og:description" content="Deep Learning, NLP, Vision par ordinateur, mis en production via FastAPI/Docker. Dix ans d'expérience full-stack Symfony / React. Bordeaux.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="files/photo-bastien-bretenet.jpg">
 
-  <!-- ============================================================
-       MARQUEE TOP BAR
-  ============================================================ -->
-  <div class="marquee-bar">
-    <div class="marquee-scroll">
-      <span class="marquee-inner">
-        ★ BIENVENUE SUR LE SITE DE Bastien Bretenet ★ DEV FULL STACK SENIOR ★ EN ROUTE VERS L'IA ★ BORDEAUX &amp; REMOTE ★ DISPONIBLE EN FREELANCE ★ FORMATION ALYRA 2026 ★ SYMFONY · REACT · DOCKER · PYTHON · LLM ★ CLIQUEZ SUR "CONTACT" POUR ME PARLER ★
-      </span>
+<!-- Favicon : placeholder, aucun favicon dédié fourni dans le projet -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          blue: {
+            DEFAULT: '#3A41E5',
+            dark: '#2D33B8',
+            tint: '#EEF0FD',
+          },
+          ink: '#1a1a1a',
+          panel: '#ECECEC',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+      },
+    },
+  }
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-site text-ink font-sans antialiased">
+
+<a href="#contenu" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-blue focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">
+  Aller au contenu
+</a>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-ink/10">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="flex items-center justify-between gap-4 py-3 sm:py-4">
+      <div class="min-w-0">
+        <p class="font-display font-700 text-lg sm:text-xl leading-tight tracking-tight truncate">
+          Bastien Bretenet
+        </p>
+        <p class="font-mono text-[11px] sm:text-xs text-ink/60 truncate">
+          dev --spécialisation="Intelligence Artificielle"
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="mailto:bastienbretenet@gmail.com"
+           class="btn-press inline-flex items-center gap-2 rounded-xl bg-blue px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-white shadow-sm shadow-blue/20 transition hover:bg-blue-dark hover:shadow-md hover:shadow-blue/30 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2">
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5v-11Z"/><path d="m4 6.5 8 6 8-6"/></svg>
+          <span class="hidden sm:inline">Contact</span>
+        </a>
+        <a href="files/cv-bastien-bretenet.pdf" download
+           class="btn-press inline-flex items-center gap-2 rounded-xl border-2 border-blue px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-blue transition hover:bg-blue-tint hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2">
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0-4.5-4.5M12 16l4.5-4.5"/><path d="M4 18v1.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V18"/></svg>
+          <span class="hidden sm:inline">Télécharger le CV</span>
+          <span class="sm:hidden">CV</span>
+        </a>
+      </div>
     </div>
-    <div class="marquee-actions">
-      <button id="share-btn" onclick="shareCV()">📤</button>
-      <button id="print-btn" onclick="window.print()">🖨️</button>
-      <span id="share-feedback">✓</span>
+
+    <nav aria-label="Sections de la page" class="hidden md:flex items-center gap-6 border-t border-ink/10 py-2 font-mono text-xs text-ink/60">
+      <a href="#apropos" data-nav class="nav-link hover:text-blue">01_apropos</a>
+      <a href="#competences" data-nav class="nav-link hover:text-blue">02_competences</a>
+      <a href="#experiences" data-nav class="nav-link hover:text-blue">03_experiences</a>
+      <a href="#formation" data-nav class="nav-link hover:text-blue">04_formation</a>
+      <a href="#contact" data-nav class="nav-link hover:text-blue">05_contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <!-- ============ HERO ============ -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-20 lg:py-24 relative">
+      <div class="flex flex-col-reverse items-start gap-10 sm:flex-row sm:items-center sm:justify-between sm:gap-12">
+        <div class="max-w-3xl">
+          <p class="font-mono text-xs sm:text-sm text-blue font-medium mb-4">
+            <span class="text-ink/40">// </span>disponible pour de nouvelles missions
+          </p>
+          <h1 class="font-display font-700 tracking-tight text-[clamp(2.1rem,6vw,4rem)] leading-[1.05]">
+            Développeur —<br class="hidden sm:block">
+            spécialisation <span class="text-blue">Intelligence Artificielle</span>
+          </h1>
+          <p class="mt-6 max-w-2xl text-base sm:text-lg text-ink/70 leading-relaxed">
+            Deep Learning, NLP et vision par ordinateur, mis en production via des APIs dockerisées —
+            adossés à une dizaine d'années de développement web full-stack.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="#experiences" class="btn-press group inline-flex items-center gap-2 rounded-xl bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-black hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2">
+              Voir le parcours
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+            </a>
+            <span class="font-mono text-xs text-ink/50">Bordeaux, France</span>
+          </div>
+        </div>
+
+        <img src="files/photo-bastien-bretenet.jpg" alt="Portrait de Bastien Bretenet"
+             class="h-32 w-32 shrink-0 rounded-2xl object-cover ring-4 ring-blue-tint shadow-sm sm:h-40 sm:w-40 lg:h-48 lg:w-48">
+      </div>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+  <div class="lg:grid lg:grid-cols-[10rem_1fr] lg:gap-10">
+
+    <!-- rail nav (desktop only, décoratif / accessibilité secondaire à la nav du header) -->
+    <aside class="hidden lg:block" aria-hidden="true">
+      <div class="sticky top-24 space-y-1 font-mono text-xs text-ink/40 pt-16">
+        <p class="text-ink/70 mb-3">~/cv</p>
+        <p data-rail="apropos" class="rail-link pl-3 border-l-2 border-ink/10 py-1">├─ apropos.md</p>
+        <p data-rail="competences" class="rail-link pl-3 border-l-2 border-ink/10 py-1">├─ competences/</p>
+        <p data-rail="experiences" class="rail-link pl-3 border-l-2 border-ink/10 py-1">├─ experiences/</p>
+        <p data-rail="formation" class="rail-link pl-3 border-l-2 border-ink/10 py-1">└─ formation.md</p>
+      </div>
+    </aside>
+
+    <div class="min-w-0">
+
+      <!-- ============ À PROPOS ============ -->
+      <section id="apropos" class="reveal py-14 sm:py-20 scroll-mt-20">
+        <p class="font-mono text-xs sm:text-sm text-blue font-medium mb-3">// à propos</p>
+        <h2 class="font-display font-700 tracking-tight text-2xl sm:text-3xl mb-6">Présentation</h2>
+        <div class="max-w-3xl space-y-5 text-[15px] sm:text-base leading-relaxed text-ink/80">
+          <p>
+            Développeur en spécialisation Intelligence Artificielle, je conçois des modèles de Deep Learning
+            et les mets en production via FastAPI dockerisées. Je travaille en Python (PyTorch, Keras,
+            Scikit-learn, Numpy) sur des problématiques variées : transfer learning et fine-tuning aussi bien
+            en NLP qu'en vision par ordinateur (CNN, classification d'images).
+          </p>
+          <p>
+            Cette expertise IA s'appuie sur une dizaine d'années de développement web full-stack. Côté backend,
+            je conçois des applications robustes avec Symfony (Doctrine, API Platform, Sylius) et côté front-end
+            des interfaces avec React JS (Tailwind CSS, Bootstrap). Je m'appuie sur Docker pour garantir des
+            environnements de développement fiables et reproductibles, sur des pipelines GitLab CI/CD, et
+            des plateformes cloud moderne pour les mises en production.
+          </p>
+          <p>
+            Je suis ainsi capable d'intervenir aux différentes étapes d'un projet ; de la prise de besoins,
+            au choix des technos, à la création de backlog, en passant par le développement, jusqu'à la mise
+            en production, la relecture de code et la documentation avec, désormais, la capacité d'y intégrer
+            des briques d'IA.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ COMPÉTENCES ============ -->
+      <section id="competences" class="reveal py-14 sm:py-20 scroll-mt-20 border-t border-ink/10">
+        <p class="font-mono text-xs sm:text-sm text-blue font-medium mb-3">// compétences</p>
+        <h2 class="font-display font-700 tracking-tight text-2xl sm:text-3xl mb-10">Compétences</h2>
+
+        <!-- IA en premier -->
+        <div class="rounded-2xl bg-ink text-white p-6 sm:p-8 shadow-sm mb-8">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="h-2 w-2 rounded-full bg-blue"></span>
+            <h3 class="font-display font-600 text-lg sm:text-xl">Intelligence Artificielle</h3>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div>
+              <p class="font-mono text-xs text-white/50 mb-2">langage &amp; outils</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge-dark">Python</span><span class="badge-dark">Numpy</span><span class="badge-dark">Scikit-learn</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-white/50 mb-2">deep learning</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge-dark">PyTorch</span><span class="badge-dark">Keras</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-white/50 mb-2">machine learning</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge-dark">k-NN</span><span class="badge-dark">K-Means</span><span class="badge-dark">Gradient Boosting</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-white/50 mb-2">NLP</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge-dark">Transfer learning</span><span class="badge-dark">Fine-tuning</span><span class="badge-dark">CamemBERTv2</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-white/50 mb-2">vision</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge-dark">CNN</span><span class="badge-dark">YOLO</span><span class="badge-dark">Classification d'images</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-white/50 mb-2">mise en production</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge-dark">FastAPI</span><span class="badge-dark">Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full-stack ensuite -->
+        <div class="rounded-2xl bg-panel p-6 sm:p-8 shadow-sm">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="h-2 w-2 rounded-full bg-ink/30"></span>
+            <h3 class="font-display font-600 text-lg sm:text-xl">Développement full-stack</h3>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div>
+              <p class="font-mono text-xs text-ink/50 mb-2">backend</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge-light">PHP</span><span class="badge-light">Symfony</span><span class="badge-light">API Platform</span><span class="badge-light">Doctrine</span><span class="badge-light">Sylius</span><span class="badge-light">MySQL</span><span class="badge-light">PostgreSQL</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-ink/50 mb-2">frontend</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge-light">React</span><span class="badge-light">Vue</span><span class="badge-light">Tailwind CSS</span><span class="badge-light">Bootstrap</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-ink/50 mb-2">devops &amp; outils</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge-light">Docker</span><span class="badge-light">Coolify</span><span class="badge-light">CI/CD</span><span class="badge-light">GitHub</span><span class="badge-light">GitLab</span><span class="badge-light">Tests unitaires &amp; fonctionnels</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-ink/50 mb-2">méthodologie</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge-light">API-first</span><span class="badge-light">Agile/Scrum</span><span class="badge-light">Revues de code</span><span class="badge-light">GitFlow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXPÉRIENCES ============ -->
+      <section id="experiences" class="reveal py-14 sm:py-20 scroll-mt-20 border-t border-ink/10">
+        <p class="font-mono text-xs sm:text-sm text-blue font-medium mb-3">// expériences</p>
+        <h2 class="font-display font-700 tracking-tight text-2xl sm:text-3xl mb-10">Expériences</h2>
+
+        <ol class="relative border-l-2 border-blue/20 space-y-10 sm:space-y-12 pl-6 sm:pl-8">
+
+          <li class="relative timeline-item">
+            <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
+            <p class="font-mono text-xs text-ink/50 mb-1">Juillet – Septembre 2026</p>
+            <h3 class="font-display font-600 text-lg sm:text-xl">Projets IA — Formation Alyra</h3>
+            <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
+              Projets de fin de formation Dev AI (RNCP 38616). Machine Learning (k-NN, K-Means, Gradient
+              Boosting). Transfer learning et fine-tuning : CamemBERTv2 pour l'analyse de sentiment (dataset
+              Allociné), CNN/YOLO pour la reconnaissance d'images satellite. Mise en production des modèles
+              via FastAPI dockerisée.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="badge-light">CamemBERTv2</span><span class="badge-light">YOLO</span><span class="badge-light">FastAPI</span><span class="badge-light">Docker</span>
+            </div>
+          </li>
+
+          <li class="relative timeline-item">
+            <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
+            <p class="font-mono text-xs text-ink/50 mb-1">Août 2023 – Janvier 2026</p>
+            <h3 class="font-display font-600 text-lg sm:text-xl">Développeur back-end puis Lead Developer — Dotsafe <span class="font-sans font-normal text-ink/50 text-base">· Bordeaux</span></h3>
+            <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
+              Agence d'une quarantaine de développeurs intervenant dans des domaines variés (banque, e-santé,
+              e-learning, start-ups). D'abord développeur back-end sur des projets PHP / Symfony / API Platform
+              avec interventions front-end (Angular, Vue.js, Nuxt, React Native) en approche API-first, puis
+              Lead Developer encadrant une équipe de 4 à 5 personnes sur des projets e-commerce Sylius et
+              applications web.
+            </p>
+            <p class="mt-3 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
+              Réalisations notables : <strong class="font-semibold text-ink">YouSchool</strong> (+55 000
+              apprenants) — gestion des rôles, notifications, messagerie vocale, calendrier récurrent ;
+              <strong class="font-semibold text-ink"> Vitivisio</strong> — développement d'un SaaS de zéro,
+              migration du stockage d'images SSD vers S3 (~90 % d'économie).
+            </p>
+            <p class="mt-3 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
+              Pilotage technique, qualité de code et montée en compétences de l'équipe. Mise en place et
+              évolution d'environnements Dockerisés, de pipelines CI/CD, d'une stratégie de tests automatisés
+              et de bonnes pratiques d'architecture (revues de code, standards,
+              refactoring), en méthodologie Agile (Scrum). Rôle d'interlocuteur client (prise de besoin,
+              conception, livraison).
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="badge-light">Symfony</span><span class="badge-light">API Platform</span><span class="badge-light">Sylius</span><span class="badge-light">Vue.js</span><span class="badge-light">React Native</span><span class="badge-light">Docker</span><span class="badge-light">CI/CD</span>
+            </div>
+          </li>
+
+          <li class="relative timeline-item">
+            <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
+            <p class="font-mono text-xs text-ink/50 mb-1">Février – Mai 2023</p>
+            <h3 class="font-display font-600 text-lg sm:text-xl">Lead Symfony — Web Design Marchand <span class="font-sans font-normal text-ink/50 text-base">· Bordeaux</span></h3>
+            <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
+              Éditeur de logiciels de caisse pour la grande distribution. Lead d'une équipe de 3
+              développeurs juniors avec pour objectif de centraliser l'ensemble des clients dans une
+              plateforme SaaS unique. Intervention sur un existant (API REST PHP 7 / Symfony 3 dockerisée,
+              front-end Vue.js, application embarquée WinDev) : stabilisation, fusion et rationalisation des
+              branches, amélioration et optimisation de l'API (fiabilité, maintenabilité, performances). Lead
+              technique, montée en compétences de l'équipe, bonnes pratiques de versioning, revue de code et
+              architecture orientée SaaS.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="badge-light">Symfony 3</span><span class="badge-light">PHP 7</span><span class="badge-light">Vue.js</span><span class="badge-light">WinDev</span>
+            </div>
+          </li>
+
+          <li class="relative timeline-item">
+            <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
+            <p class="font-mono text-xs text-ink/50 mb-1">Novembre 2021 – Juin 2022</p>
+            <h3 class="font-display font-600 text-lg sm:text-xl">Développeur web (CDD) — Groupe Pichet <span class="font-sans font-normal text-ink/50 text-base">· Bordeaux</span></h3>
+            <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
+              Au sein de la DSI, développement sur pichet.fr en environnement Agile. Maintenance et évolution
+              d'une application Symfony 5 / Vue.js à architecture API custom et CQRS, au sein d'une équipe de
+              8 développeurs, 1 DevOps et 1 PO. Gestion des demandes métier via Jira, création/refonte de DTO
+              pour la maintenabilité, développement de nouvelles routes API, contribution à un datalayer
+              (scripts JS d'analyse comportementale) et à une nouvelle feature front. Rituels Agile, code
+              reviews, GitFlow, documentation technique, environnement Dockerisé et CI/CD GitLab.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="badge-light">Symfony 5</span><span class="badge-light">Vue.js</span><span class="badge-light">CQRS</span><span class="badge-light">Jira</span><span class="badge-light">GitLab CI/CD</span>
+            </div>
+          </li>
+
+          <li class="relative timeline-item">
+            <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
+            <p class="font-mono text-xs text-ink/50 mb-1">2019 – aujourd'hui</p>
+            <h3 class="font-display font-600 text-lg sm:text-xl">Développeur web — Freelance / Agence Atom</h3>
+            <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
+              Conception et réalisation de bout en bout d'applications web pour TPE/PME (architecture,
+              développement, déploiement, relation client). Sélection de projets :
+            </p>
+            <div class="mt-4 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-xl bg-panel p-4">
+                <p class="font-display font-600 text-sm mb-1.5">Chemins Inédits</p>
+                <p class="text-sm text-ink/70 leading-relaxed">Plateforme de parcours culturels et ludiques avec e-commerce, expérience mobile-first et back-office administrateur. Paiements Stripe, facturation PDF, workflows automatisés. Encadrement d'un stagiaire 6 mois.</p>
+                <div class="mt-2.5 flex flex-wrap gap-1.5">
+                  <span class="badge-light text-[11px]">Symfony 5</span><span class="badge-light text-[11px]">Twig</span><span class="badge-light text-[11px]">Symfony UX</span><span class="badge-light text-[11px]">Stripe</span>
+                </div>
+              </div>
+              <div class="rounded-xl bg-panel p-4">
+                <p class="font-display font-600 text-sm mb-1.5">Tracks Club</p>
+                <p class="text-sm text-ink/70 leading-relaxed">Jeu en ligne multijoueur compétitif organisé en clubs (vote, scoring, classement automatisé). Composant Workflow, intégration API YouTube, UX/UI mobile-first avec une graphiste.</p>
+                <div class="mt-2.5 flex flex-wrap gap-1.5">
+                  <span class="badge-light text-[11px]">Symfony 5</span><span class="badge-light text-[11px]">Tailwind</span><span class="badge-light text-[11px]">YouTube API</span>
+                </div>
+              </div>
+              <div class="rounded-xl bg-panel p-4">
+                <p class="font-display font-600 text-sm mb-1.5">Crus et Terroirs</p>
+                <p class="text-sm text-ink/70 leading-relaxed">E-commerce dans le vin sur Sylius / Symfony. Intégration ElasticSearch via Docker, services et entités sur-mesure, hébergement OVH.</p>
+                <div class="mt-2.5 flex flex-wrap gap-1.5">
+                  <span class="badge-light text-[11px]">Sylius</span><span class="badge-light text-[11px]">ElasticSearch</span><span class="badge-light text-[11px]">Bootstrap</span>
+                </div>
+              </div>
+              <div class="rounded-xl bg-panel p-4">
+                <p class="font-display font-600 text-sm mb-1.5">Showroom Mathom</p>
+                <p class="text-sm text-ink/70 leading-relaxed">Outil de gestion des rendez-vous pour un distributeur multi-marques (1 200 clients). Synchronisation Google Calendar, listing/filtrage dynamique en React, export CSV.</p>
+                <div class="mt-2.5 flex flex-wrap gap-1.5">
+                  <span class="badge-light text-[11px]">Symfony 5</span><span class="badge-light text-[11px]">React.js</span><span class="badge-light text-[11px]">Google API</span>
+                </div>
+              </div>
+              <div class="rounded-xl bg-panel p-4 sm:col-span-2">
+                <p class="font-display font-600 text-sm mb-1.5">Immo Cap-Ferret</p>
+                <p class="text-sm text-ink/70 leading-relaxed">Site WordPress à thème sur-mesure connecté à un logiciel de gestion (SPI). Migration de l'API XML vers une API REST, fiabilisation de la synchronisation des biens.</p>
+                <div class="mt-2.5 flex flex-wrap gap-1.5">
+                  <span class="badge-light text-[11px]">WordPress</span><span class="badge-light text-[11px]">API REST</span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="relative timeline-item">
+            <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
+            <p class="font-mono text-xs text-ink/50 mb-1">Janvier 2017 – Mai 2019</p>
+            <h3 class="font-display font-600 text-lg sm:text-xl">Développeur web — Kn Design</h3>
+            <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
+              Réalisation de plusieurs projets WordPress et PHP.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="badge-light">WordPress</span><span class="badge-light">PHP</span>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
+      <!-- ============ FORMATION ============ -->
+      <section id="formation" class="reveal py-14 sm:py-20 scroll-mt-20 border-t border-ink/10">
+        <p class="font-mono text-xs sm:text-sm text-blue font-medium mb-3">// formation</p>
+        <h2 class="font-display font-700 tracking-tight text-2xl sm:text-3xl mb-10">Formation</h2>
+
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="rounded-2xl bg-panel p-5 sm:p-6">
+            <p class="font-mono text-xs text-ink/50 mb-2">2026</p>
+            <h3 class="font-display font-600 text-base sm:text-lg">ALYRA</h3>
+            <p class="mt-1 text-sm text-ink/70">Dev AI — RNCP 38616 (Blocs 3 &amp; 5)</p>
+          </div>
+          <div class="rounded-2xl bg-panel p-5 sm:p-6">
+            <p class="font-mono text-xs text-ink/50 mb-2">2015</p>
+            <h3 class="font-display font-600 text-base sm:text-lg">INGÉSUP</h3>
+            <p class="mt-1 text-sm text-ink/70">M1 Ingénieur Informatique</p>
+          </div>
+          <div class="rounded-2xl bg-panel p-5 sm:p-6">
+            <p class="font-mono text-xs text-ink/50 mb-2">2014</p>
+            <h3 class="font-display font-600 text-base sm:text-lg">Université Bordeaux 2</h3>
+            <p class="mt-1 text-sm text-ink/70">Licence MIASH</p>
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
+  </div>
 
-  <div class="max-w-4xl mx-auto px-4 py-4">
+</main>
 
-    <nav class="retro-nav" aria-label="Navigation principale">
-      <span class="font-mono text-xs text-sepia mr-2 select-none">[ Menu ]</span>
-      <a href="#hero">Accueil</a>
-      <a href="#apropos">À propos</a>
-      <a href="#stack">Stack</a>
-      <a href="#apprentissage">IA / Alyra</a>
-      <a href="#methode">Méthode</a>
-      <a href="#pourqui">Pour qui</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="mt-10 border-t border-ink/10 bg-ink text-white scroll-mt-20">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-16">
+    <div class="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
 
-    <!-- ============================================================
-         SECTION 1 — HERO
-    ============================================================ -->
-    <section id="hero" class="mb-6" aria-label="Présentation principale">
-      <div class="win95-deep">
-        <div class="titlebar">
-          <div class="flex items-center gap-1 min-w-0">
-            <span class="titlebar-icon">🖥️</span>
-            <span class="truncate">Bastien Bretenet — portfolio.exe — Dev Full Stack &amp; IA</span>
-          </div>
-          <div class="titlebar-btns">
-            <div class="win-btn">_</div>
-            <div class="win-btn">□</div>
-            <div class="win-btn font-bold">✕</div>
-          </div>
-        </div>
-        <div class="win-body" style="padding: 0;">
-          <div class="hero-layout flex items-stretch flex-wrap">
+      <div>
+        <p class="font-display font-700 text-xl">Bastien Bretenet</p>
+        <p class="font-mono text-xs text-white/50 mt-1">Développeur — spécialisation Intelligence Artificielle</p>
 
-            <!-- Photo avant/après -->
-            <div class="flex-shrink-0" style="padding: 24px 16px 24px 20px; display:flex; align-items:center;">
-              <div style="
-                transform: rotate(-3deg);
-                box-shadow: 4px 4px 0 #8a7560, 8px 8px 0 rgba(0,0,0,0.25), 0 16px 32px rgba(0,0,0,0.3);
-                background: white;
-                padding: 8px 8px 32px 8px;
-                display: inline-block;
-              ">
-                <div class="ba-slider" id="ba-slider">
-                  <!-- AFTER (défaut, dessous) -->
-                  <img class="ba-img" src="./photo-1.png" alt="Photo de Bastien Bretenet (après)" draggable="false">
-                  <!-- BEFORE (révélé par slide, dessus, clippé) -->
-                  <div class="ba-before" id="ba-before">
-                    <img class="ba-img" src="./photo-2.jpg" alt="Photo de Bastien Bretenet (avant)" draggable="false">
-                  </div>
-                  <!-- Poignée -->
-                  <div class="ba-handle" id="ba-handle">
-                    <div class="ba-handle-line"></div>
-                    <div class="ba-handle-grip">◄ ►</div>
-                  </div>
-                  <input type="range" min="0" max="100" value="50" class="ba-range" id="ba-range"
-                    aria-label="Curseur avant / après photo">
-                </div>
-                <div style="text-align:center; font-family:\'Share Tech Mono\',monospace; font-size:10px; color:#8a7560; margin-top:6px;">Bastien Bretenet · 2026</div>
-              </div>
-            </div>
-
-            <!-- Content -->
-            <div class="flex-1 min-w-0" style="padding: 14px 16px;">
-              <div class="hero-name">Bastien Bretenet</div>
-              <div class="hero-role">Développeur Full Stack Senior &amp; (bientôt) IA</div>
-
-              <div class="mt-4 mb-4 text-base leading-relaxed">
-                <p class="mb-3">
-                  <em class="text-sepia">Développeur full stack senior, en route vers l'IA.</em>
-                </p>
-                <p class="mb-3">
-                  Depuis bientôt 10 ans, je code. J'ai commencé par des sites PHP en agence — pas de framework, pas de git, pas de CI/CD. Puis la curiosité a pris le dessus : Symfony, Docker, les APIs, les tests. Chaque nouvelle techno apprise par envie, pas par obligation. 
-                  Aujourd'hui, j'ai travaillé en agence, en freelance, pour des startups, des SaaS B2B et des grands groupes. En 2026, je franchis une nouvelle étape : l'intelligence artificielle, avec une formation Développeur IA chez Alyra.
-                </p>
-                <p class="mb-3">
-                  Pourquoi&nbsp;? Parce que l'IA est en train de redéfinir les règles — pas dans 5 ans, maintenant. Les entreprises qui ne s'en emparent pas vont se faire dépasser par celles qui l'ont intégré au cœur de leur produit. Mon pari&nbsp;: maîtriser ce virage pour accompagner les boîtes qui veulent rester dans la course, pas juste suivre la tendance.
-                </p>
-              </div>
-
-              <div class="flex flex-wrap gap-2 items-center">
-                <span class="badge-location">📍 Bordeaux &amp; Remote France</span>
-                <span class="badge-dispo">✓ Disponible en freelance</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
-
-    <!-- ============================================================
-         SECTION 2 — À PROPOS
-    ============================================================ -->
-    <section id="apropos" class="mb-6" aria-label="À propos">
-      <div class="win95-deep">
-        <div class="titlebar">
-          <div class="flex items-center gap-1">
-            <span class="titlebar-icon">📄</span>
-            <span>le_pont_entre_deux_mondes.txt — Bloc-notes</span>
-          </div>
-          <div class="titlebar-btns">
-            <div class="win-btn">_</div>
-            <div class="win-btn">□</div>
-            <div class="win-btn">✕</div>
-          </div>
-        </div>
-        <div class="win-body">
-          <h2 class="retro-h2">Le pont entre deux mondes</h2>
-          <div class="win-inset mb-4 text-sm leading-relaxed">
-            <p class="mb-3">8+ ans de web, PHP, Symfony, d'API, de Docker et de CI/CD. </p>
-            <p>Le marché bascule&nbsp;: les boîtes cherchent des profils capables de <strong>mettre une IA en prod dans une vraie app</strong>. C'est exactement le profil que je construis — avec la formation Développeur IA d'Alyra comme nouvelle couche par-dessus mon socle technique.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
-
-    <!-- ============================================================
-         SECTION 3 — STACK
-    ============================================================ -->
-    <section id="stack" class="mb-6" aria-label="Stack technique">
-      <h2 class="retro-h2 px-1">Stack actuelle — ce que je maîtrise</h2>
-      <div class="stack-grid">
-
-        <div class="win95">
-          <div class="titlebar" style="background: linear-gradient(to right, #1a4a2a, #2a6a3a);">
-            <div class="flex items-center gap-1">
-              <span class="titlebar-icon">⚙️</span>
-              <span>Backend.exe</span>
-            </div>
-            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
-          </div>
-          <div class="win-body">
-            <ul class="stack-list">
-              <li>PHP · Symfony</li>
-              <li>API Platform</li>
-              <li>Doctrine ORM</li>
-              <li>Symfony Messenger</li>
-              <li>PHPUnit</li>
-              <li>MySQL · PostgreSQL</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="win95">
-          <div class="titlebar" style="background: linear-gradient(to right, #6b2020, #9b3030);">
-            <div class="flex items-center gap-1">
-              <span class="titlebar-icon">🖥️</span>
-              <span>Frontend.exe</span>
-            </div>
-            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
-          </div>
-          <div class="win-body">
-            <ul class="stack-list">
-              <li>JavaScript · TypeScript</li>
-              <li>React · Vue.js</li>
-              <li>Next.js · Nuxt</li>
-              <li>Stimulus · Turbo</li>
-              <li>Tailwind · Bootstrap</li>
-              <li>HTML · CSS</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="win95">
-          <div class="titlebar" style="background: linear-gradient(to right, #3a2060, #5a3080);">
-            <div class="flex items-center gap-1">
-              <span class="titlebar-icon">🐳</span>
-              <span>Infra & Outils.exe</span>
-            </div>
-            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
-          </div>
-          <div class="win-body">
-            <ul class="stack-list">
-              <li>Docker · Linux</li>
-              <li>GitHub Actions</li>
-              <li>GitLab CI</li>
-              <li>Git (avancé)</li>
-              <li>Coolify · VPS</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
-
-    <!-- ============================================================
-         SECTION 4 — APPRENTISSAGE
-    ============================================================ -->
-    <section id="apprentissage" class="mb-6" aria-label="Formation IA Alyra">
-      <div class="win95-deep">
-        <div class="titlebar">
-          <div class="flex items-center gap-1">
-            <span class="titlebar-icon">📚</span>
-            <span>Formation Alyra 2026 — CHARGEMENT EN COURS...</span>
-          </div>
-          <div class="titlebar-btns">
-            <div class="win-btn">_</div>
-            <div class="win-btn">□</div>
-            <div class="win-btn">✕</div>
-          </div>
-        </div>
-        <div class="win-body">
-          <h2 class="retro-h2">En apprentissage — Formation Alyra 2026</h2>
-          <p class="text-sm italic text-sepia mb-4">
-            Formation Développeur IA en cours. Voici ce que j'apprends, honnêtement.
-          </p>
-
-          <!-- 3 groupes compacts en ligne -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs font-mono">
-
-            <div class="win-inset">
-              <div class="font-bold mb-2" style="color: var(--vert);">🐍 Data & Python</div>
-              <div class="space-y-1" style="color: var(--sepia);">
-                <div>Python · SQL · Pandas</div>
-                <div>Matplotlib · Seaborn · EDA</div>
-              </div>
-            </div>
-
-            <div class="win-inset">
-              <div class="font-bold mb-2" style="color: var(--bleu);">🤖 ML & Deep Learning</div>
-              <div class="space-y-1" style="color: var(--sepia);">
-                <div>Scikit-learn · Keras · TensorFlow</div>
-                <div>ANN · CNN · RNN · Fine-tuning</div>
-              </div>
-            </div>
-
-            <div class="win-inset">
-              <div class="font-bold mb-2" style="color: var(--bordeaux);">🚀 Déploiement & MLOps</div>
-              <div class="space-y-1" style="color: var(--sepia);">
-                <div>FastAPI · Streamlit</div>
-                <div>MLOps · Cloud IA · Prod</div>
-              </div>
-            </div>
-
-          </div>
-
-          <p class="mt-4 text-xs italic" style="color: var(--sepia-light);">
-            Programme Alyra — certifiant, 100% en ligne, intervenants terrain. Début 2026.
-          </p>
-
-        </div>
-      </div>
-    </section>
-
-    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
-
-    <!-- ============================================================
-         SECTION 6 — MÉTHODE
-    ============================================================ -->
-    <section id="methode" class="mb-6" aria-label="Méthode de travail">
-      <h2 class="retro-h2 px-1">Comment je bosse</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-
-        <div class="win95">
-          <div class="titlebar">
-            <span>🚀 Principe n°1</span>
-            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
-          </div>
-          <div class="win-body">
-            <div class="methode-num">1.</div>
-            <div class="font-bold mb-2 text-sm">Je livre.</div>
-            <p class="text-sm leading-relaxed" style="color: var(--sepia);">Pas de prototype qui dort dans une branche. Code en prod, déployé, monitoré. Le reste, c'est du PowerPoint.</p>
-          </div>
-        </div>
-
-        <div class="win95">
-          <div class="titlebar">
-            <span>🤖 Principe n°2</span>
-            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
-          </div>
-          <div class="win-body">
-            <div class="methode-num">2.</div>
-            <div class="font-bold mb-2 text-sm">L'IA comme copilote.</div>
-            <p class="text-sm leading-relaxed" style="color: var(--sepia);">Je m'appuie sur les LLMs pour aller vite sans perdre en qualité. C'est exactement ce que les boîtes attendent en 2026.</p>
-          </div>
-        </div>
-
-        <div class="win95">
-          <div class="titlebar">
-            <span>💬 Principe n°3</span>
-            <div class="titlebar-btns"><div class="win-btn">✕</div></div>
-          </div>
-          <div class="win-body">
-            <div class="methode-num">3.</div>
-            <div class="font-bold mb-2 text-sm">Je parle business.</div>
-            <p class="text-sm leading-relaxed" style="color: var(--sepia);">Vous me dites votre problème, je vous propose la solution la plus simple qui marche. Pas la stack la plus hype.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
-
-    <!-- ============================================================
-         SECTION 7 — POUR QUI
-    ============================================================ -->
-    <section id="pourqui" class="mb-6" aria-label="Pour qui je travaille">
-      <div class="win95-deep">
-        <div class="titlebar">
-          <div class="flex items-center gap-1">
-            <span class="titlebar-icon">🎯</span>
-            <span>Startup ou SaaS B2B ? — services.txt</span>
-          </div>
-          <div class="titlebar-btns">
-            <div class="win-btn">_</div>
-            <div class="win-btn">□</div>
-            <div class="win-btn">✕</div>
-          </div>
-        </div>
-        <div class="win-body">
-          <h2 class="retro-h2">Vous êtes une entreprise ? Vous ne voulez pas louper la vague ?</h2>
-          <p class="mb-4 text-sm">On va s'entendre. Voici ce sur quoi je peux vous accompagner&nbsp;:</p>
-          <ul class="services-list text-sm">
-            <li><span><strong>Développement de votre produit</strong> — Backend & Frontend</span></li>
-            <li><span><strong>Intégration d'IA dans votre app</strong> — LLM, RAG, agents <em class="text-xs">(Bientôt)</em></span></li>
-            <li><span><strong>Audit &amp; refonte</strong> d'applications existantes</span></li>
-            <li><span><strong>Mise en place CI/CD, Docker, infrastructure</strong></span></li>
-            <li><span><strong>Conseils techniques</strong></span></li>
-          </ul>
-          <p class="mt-4 text-sm italic pt-3 border-t" style="border-color: var(--rule); color: var(--sepia);">
-            Disponible 100% remote, ou sur Bordeaux et alentours pour les rencontres en présentiel.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="hr-ornee" aria-hidden="true">· · · ✦ · · ·</div>
-
-    <!-- ============================================================
-         SECTION 8 — CONTACT
-    ============================================================ -->
-    <section id="contact" class="mb-6" aria-label="Contact">
-      <div class="win95-deep">
-        <div class="titlebar">
-          <div class="flex items-center gap-1">
-            <span class="titlebar-icon">📧</span>
-            <span>contact.bat — Invite de commandes</span>
-          </div>
-          <div class="titlebar-btns">
-            <div class="win-btn">_</div>
-            <div class="win-btn">□</div>
-            <div class="win-btn">✕</div>
-          </div>
-        </div>
-        <div class="win-body">
-          <h2 class="retro-h2">On en parle&nbsp;?</h2>
-          <p class="text-sm mb-4">Le plus simple, c'est par email. Je réponds vite (sauf le week-end, je code des side projects).</p>
-
-          <div class="terminal" role="complementary" aria-label="Coordonnées de contact">
-            <div class="terminal-line"><span class="terminal-prompt">C:\&gt; </span>whoami</div>
-            <div class="terminal-line">Bastien Bretenet — Dev Full Stack &amp; IA</div>
-            <div class="terminal-line">&nbsp;</div>
-            <div class="terminal-line"><span class="terminal-prompt">C:\&gt; </span>cat contact.cfg</div>
-            <div class="terminal-line">Email    : <a href="mailto:bastienbretenet@gmail.com">bastienbretenet@gmail.com</a></div>
-            <div class="terminal-line">LinkedIn : <a href="https://www.linkedin.com/in/bastien-bretenet-013871110/" target="_blank" rel="noopener noreferrer">Mon Linkedin</a></div>
-            <div class="terminal-line">&nbsp;</div>
-            <div class="terminal-line"><span class="terminal-prompt">C:\&gt; </span><span class="cursor"></span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         FOOTER
-    ============================================================ -->
-    <footer class="retro-footer" aria-label="Pied de page">
-
-      <div class="under-construction">🚧 FORMATION IA EN COURS 🚧</div>
-
-      <div class="footer-badges">
-        <span class="footer-badge">[ No cookies · No tracking ]</span>
+        <ul class="mt-6 space-y-3 text-sm">
+          <li>
+            <a href="mailto:bastienbretenet@gmail.com" class="inline-flex items-center gap-2.5 text-white/80 hover:text-white transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue rounded">
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5v-11Z"/><path d="m4 6.5 8 6 8-6"/></svg>
+              bastienbretenet@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="tel:+33670279081" class="inline-flex items-center gap-2.5 text-white/80 hover:text-white transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue rounded">
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5c0-.8.7-1.5 1.5-1.5h2.1c.6 0 1.2.4 1.4 1l1.2 3a1.5 1.5 0 0 1-.4 1.6l-1.3 1.2a12 12 0 0 0 5.3 5.3l1.2-1.3a1.5 1.5 0 0 1 1.6-.4l3 1.2c.6.2 1 .8 1 1.4v2.1c0 .8-.7 1.5-1.5 1.5C10.6 20.6 3.4 13.4 3.4 5.5"/></svg>
+              06 70 27 90 81
+            </a>
+          </li>
+          <li aria-label="LinkedIn : Bastien Bretenet" class="inline-flex items-center gap-2.5 text-white/80">
+            <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5h16a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5Z"/><path d="M7.5 10v6.5M7.5 7.6v.01M11.5 16.5V10m0 0c0-1.4 1-2.3 2.2-2.3 1.4 0 2.3.9 2.3 2.6v5.7"/></svg>
+            <a href="https://www.linkedin.com/in/bastien-bretenet-013871110/" target="_blank">
+              LinkedIn — Bastien Bretenet
+            </a>
+          </li>
+          <li class="inline-flex items-center gap-2.5 text-white/80">
+            <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+            Bordeaux, France
+          </li>
+        </ul>
       </div>
 
-      <div class="mt-3 text-xs">
-        <span>Last updated : <time datetime="2026-05-16">2026-05-16</time></span>
-        &nbsp;|&nbsp;
-        <span id="retro-clock" aria-live="off">--:--:--</span>
-        &nbsp;|&nbsp;
-        <span>© 2026 — Bastien Bretenet</span>
+      <div class="flex flex-col items-start gap-3 sm:items-end">
+        <a href="mailto:bastienbretenet@gmail.com"
+           class="inline-flex items-center gap-2 rounded-xl bg-blue px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+          Me contacter
+        </a>
+        <a href="files/cv-bastien-bretenet.pdf" download
+           class="inline-flex items-center gap-2 rounded-xl border-2 border-white/30 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-white hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+          Télécharger le CV
+        </a>
       </div>
+    </div>
 
-    </footer>
+    <div class="mt-12 border-t border-white/10 pt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <p class="font-mono text-xs text-white/40">© <span id="year">2026</span> Bastien Bretenet</p>
+      <p class="font-mono text-xs text-white/40">bastienbretenet.fr</p>
+    </div>
+  </div>
+</footer>
 
-  </div><!-- /max-w-4xl -->
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
