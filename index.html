@@ -10,8 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="files/photo-bastien-bretenet.jpg">
 
-<!-- Favicon : placeholder, aucun favicon dédié fourni dans le projet -->
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/png" sizes="32x32" href="files/favicon-32x32.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +55,7 @@
         <p class="font-display font-700 text-lg sm:text-xl leading-tight tracking-tight truncate">
           Bastien Bretenet
         </p>
-        <p class="font-mono text-[11px] sm:text-xs text-ink/60 truncate">
+        <p class="hidden sm:block font-mono text-xs text-ink/60 whitespace-nowrap">
           dev --spécialisation="Intelligence Artificielle"
         </p>
       </div>
@@ -100,13 +99,13 @@
             Développeur —<br class="hidden sm:block">
             spécialisation <span class="text-blue">Intelligence Artificielle</span>
           </h1>
-          <p class="mt-6 max-w-2xl text-base sm:text-lg text-ink/70 leading-relaxed">
+          <p class="mt-6 max-w-2xl text-base sm:text-lg text-ink/85 leading-relaxed">
             Deep Learning, NLP et vision par ordinateur, mis en production via des APIs dockerisées —
             adossés à une dizaine d'années de développement web full-stack.
           </p>
 
           <div class="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#experiences" class="btn-press group inline-flex items-center gap-2 rounded-xl bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-black hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2">
+            <a href="#experiences" class="btn-press group inline-flex items-center gap-2 rounded-xl bg-blue px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue/20 transition hover:bg-blue-dark hover:-translate-y-0.5 hover:shadow-md hover:shadow-blue/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2">
               Voir le parcours
               <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
             </a>
@@ -143,7 +142,7 @@
         <div class="max-w-3xl space-y-5 text-[15px] sm:text-base leading-relaxed text-ink/80">
           <p>
             Développeur en spécialisation Intelligence Artificielle, je conçois des modèles de Deep Learning
-            et les mets en production via FastAPI dockerisées. Je travaille en Python (PyTorch, Keras,
+            et les mets en production via des APIs FastAPI dockerisées. Je travaille en Python (PyTorch, Keras,
             Scikit-learn, Numpy) sur des problématiques variées : transfer learning et fine-tuning aussi bien
             en NLP qu'en vision par ordinateur (CNN, classification d'images).
           </p>
@@ -152,7 +151,7 @@
             je conçois des applications robustes avec Symfony (Doctrine, API Platform, Sylius) et côté front-end
             des interfaces avec React JS (Tailwind CSS, Bootstrap). Je m'appuie sur Docker pour garantir des
             environnements de développement fiables et reproductibles, sur des pipelines GitLab CI/CD, et
-            des plateformes cloud moderne pour les mises en production.
+            des plateformes cloud modernes pour les mises en production.
           </p>
           <p>
             Je suis ainsi capable d'intervenir aux différentes étapes d'un projet ; de la prise de besoins,
@@ -258,13 +257,13 @@
 
           <li class="relative timeline-item">
             <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
-            <p class="font-mono text-xs text-ink/50 mb-1">Juillet – Septembre 2026</p>
+            <p class="font-mono text-xs font-medium text-blue mb-1">Juillet – Septembre 2026</p>
             <h3 class="font-display font-600 text-lg sm:text-xl">Projets IA — Formation Alyra</h3>
             <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
               Projets de fin de formation Dev AI (RNCP 38616). Machine Learning (k-NN, K-Means, Gradient
               Boosting). Transfer learning et fine-tuning : CamemBERTv2 pour l'analyse de sentiment (dataset
               Allociné), CNN/YOLO pour la reconnaissance d'images satellite. Mise en production des modèles
-              via FastAPI dockerisée.
+              via des APIs FastAPI dockerisée.
             </p>
             <div class="mt-3 flex flex-wrap gap-2">
               <span class="badge-light">CamemBERTv2</span><span class="badge-light">YOLO</span><span class="badge-light">FastAPI</span><span class="badge-light">Docker</span>
@@ -273,7 +272,7 @@
 
           <li class="relative timeline-item">
             <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
-            <p class="font-mono text-xs text-ink/50 mb-1">Août 2023 – Janvier 2026</p>
+            <p class="font-mono text-xs font-medium text-blue mb-1">Août 2023 – Janvier 2026</p>
             <h3 class="font-display font-600 text-lg sm:text-xl">Développeur back-end puis Lead Developer — Dotsafe <span class="font-sans font-normal text-ink/50 text-base">· Bordeaux</span></h3>
             <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
               Agence d'une quarantaine de développeurs intervenant dans des domaines variés (banque, e-santé,
@@ -302,7 +301,7 @@
 
           <li class="relative timeline-item">
             <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
-            <p class="font-mono text-xs text-ink/50 mb-1">Février – Mai 2023</p>
+            <p class="font-mono text-xs font-medium text-blue mb-1">Février – Mai 2023</p>
             <h3 class="font-display font-600 text-lg sm:text-xl">Lead Symfony — Web Design Marchand <span class="font-sans font-normal text-ink/50 text-base">· Bordeaux</span></h3>
             <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
               Éditeur de logiciels de caisse pour la grande distribution. Lead d'une équipe de 3
@@ -320,7 +319,7 @@
 
           <li class="relative timeline-item">
             <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
-            <p class="font-mono text-xs text-ink/50 mb-1">Novembre 2021 – Juin 2022</p>
+            <p class="font-mono text-xs font-medium text-blue mb-1">Novembre 2021 – Juin 2022</p>
             <h3 class="font-display font-600 text-lg sm:text-xl">Développeur web (CDD) — Groupe Pichet <span class="font-sans font-normal text-ink/50 text-base">· Bordeaux</span></h3>
             <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
               Au sein de la DSI, développement sur pichet.fr en environnement Agile. Maintenance et évolution
@@ -337,7 +336,7 @@
 
           <li class="relative timeline-item">
             <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
-            <p class="font-mono text-xs text-ink/50 mb-1">2019 – aujourd'hui</p>
+            <p class="font-mono text-xs font-medium text-blue mb-1">2019 – aujourd'hui</p>
             <h3 class="font-display font-600 text-lg sm:text-xl">Développeur web — Freelance / Agence Atom</h3>
             <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
               Conception et réalisation de bout en bout d'applications web pour TPE/PME (architecture,
@@ -384,7 +383,7 @@
 
           <li class="relative timeline-item">
             <span class="timeline-dot absolute -left-[31px] sm:-left-[39px] top-1 h-3.5 w-3.5 rounded-full bg-blue ring-4 ring-blue-tint"></span>
-            <p class="font-mono text-xs text-ink/50 mb-1">Janvier 2017 – Mai 2019</p>
+            <p class="font-mono text-xs font-medium text-blue mb-1">Janvier 2017 – Mai 2019</p>
             <h3 class="font-display font-600 text-lg sm:text-xl">Développeur web — Kn Design</h3>
             <p class="mt-2 text-[15px] sm:text-base text-ink/80 leading-relaxed max-w-3xl">
               Réalisation de plusieurs projets WordPress et PHP.
@@ -403,19 +402,16 @@
         <h2 class="font-display font-700 tracking-tight text-2xl sm:text-3xl mb-10">Formation</h2>
 
         <div class="grid gap-4 sm:grid-cols-3">
-          <div class="rounded-2xl bg-panel p-5 sm:p-6">
-            <p class="font-mono text-xs text-ink/50 mb-2">2026</p>
-            <h3 class="font-display font-600 text-base sm:text-lg">ALYRA</h3>
+          <div class="rounded-2xl bg-panel px-5 py-4 sm:px-6 sm:py-4">
+            <p class="font-mono text-xs text-blue font-medium">2026 <span class="text-ink/40 font-normal">·</span> <span class="font-display font-600 text-ink text-base align-middle">ALYRA</span></p>
             <p class="mt-1 text-sm text-ink/70">Dev AI — RNCP 38616 (Blocs 3 &amp; 5)</p>
           </div>
-          <div class="rounded-2xl bg-panel p-5 sm:p-6">
-            <p class="font-mono text-xs text-ink/50 mb-2">2015</p>
-            <h3 class="font-display font-600 text-base sm:text-lg">INGÉSUP</h3>
+          <div class="rounded-2xl bg-panel px-5 py-4 sm:px-6 sm:py-4">
+            <p class="font-mono text-xs text-blue font-medium">2015 <span class="text-ink/40 font-normal">·</span> <span class="font-display font-600 text-ink text-base align-middle">INGÉSUP</span></p>
             <p class="mt-1 text-sm text-ink/70">M1 Ingénieur Informatique</p>
           </div>
-          <div class="rounded-2xl bg-panel p-5 sm:p-6">
-            <p class="font-mono text-xs text-ink/50 mb-2">2014</p>
-            <h3 class="font-display font-600 text-base sm:text-lg">Université Bordeaux 2</h3>
+          <div class="rounded-2xl bg-panel px-5 py-4 sm:px-6 sm:py-4">
+            <p class="font-mono text-xs text-blue font-medium">2014 <span class="text-ink/40 font-normal">·</span> <span class="font-display font-600 text-ink text-base align-middle">Université Bordeaux 2</span></p>
             <p class="mt-1 text-sm text-ink/70">Licence MIASH</p>
           </div>
         </div>
