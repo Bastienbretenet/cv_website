@@ -57,3 +57,44 @@ if (sections.length) {
 
   sections.forEach((section) => sectionObserver.observe(section));
 }
+
+// Modales génériques (ouverture/fermeture via data-open-modal / data-close-modal).
+document.querySelectorAll('[data-open-modal]').forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const modal = document.getElementById(trigger.dataset.openModal);
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.classList.add('overflow-hidden');
+  });
+});
+
+document.querySelectorAll('[id^="modal-"]').forEach((modal) => {
+  const close = () => {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.classList.remove('overflow-hidden');
+  };
+  modal.querySelectorAll('[data-close-modal]').forEach((btn) => btn.addEventListener('click', close));
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) close();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !modal.classList.contains('hidden')) close();
+  });
+});
+
+// Slider avant / après (croquis vs image générée).
+document.querySelectorAll('.ba-slider').forEach((slider) => {
+  const after = slider.querySelector('.ba-slider-after');
+  const handle = slider.querySelector('.ba-slider-handle');
+  const input = slider.querySelector('.ba-slider-input');
+
+  const setPosition = (percent) => {
+    const clamped = Math.min(100, Math.max(0, percent));
+    after.style.clipPath = `inset(0 ${100 - clamped}% 0 0)`;
+    handle.style.left = `${clamped}%`;
+  };
+
+  input.addEventListener('input', () => setPosition(Number(input.value)));
+});
