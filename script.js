@@ -1,24 +1,5 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-// Révélation au scroll : chaque section apparaît une fois, discrètement.
-const revealEls = document.querySelectorAll('.reveal');
-if (revealEls.length && !prefersReducedMotion) {
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
-
-  revealEls.forEach((el) => revealObserver.observe(el));
-} else {
-  revealEls.forEach((el) => el.classList.add('is-visible'));
-}
-
 // Section active : nav du header + rail façon arborescence de fichiers.
 const sectionIds = ['apropos', 'competences', 'experiences', 'formation', 'contact'];
 const navLinks = document.querySelectorAll('[data-nav]');
